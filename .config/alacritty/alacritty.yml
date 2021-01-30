@@ -94,6 +94,65 @@ font:
 # Colors
 
 schemes:
+
+  ayu: &ayu
+    bright:
+      black: '#323232'
+      blue: '#68d5ff'
+      cyan: '#c7fffd'
+      green: '#eafe84'
+      magenta: '#ffa3aa'
+      red: '#ff6565'
+      white: '#ffffff'
+      yellow: '#fff779'
+    cursor:
+      cursor: '#f29718'
+      text: '#e6e1cf'
+    normal:
+      black: '#000000'
+      blue: '#36a3d9'
+      cyan: '#95e6cb'
+      green: '#b8cc52'
+      magenta: '#f07178'
+      red: '#ff3333'
+      white: '#ffffff'
+      yellow: '#e7c547'
+    primary:
+      background: '#0f1419'
+      foreground: '#e6e1cf'
+    selection:
+      background: '#253340'
+      text: '#e6e1cf'
+
+  challenger_deep: &challenger_deep
+    bright:
+      black: '#565575'
+      blue: '#91ddff'
+      cyan: '#aaffe4'
+      green: '#95ffa4'
+      magenta: '#c991e1'
+      red: '#ff8080'
+      white: '#cbe3e7'
+      yellow: '#ffe9aa'
+    cursor:
+      cursor: '#fbfcfc'
+      text: '#ff271d'
+    normal:
+      black: '#141228'
+      blue: '#65b2ff'
+      cyan: '#63f2f1'
+      green: '#62d196'
+      magenta: '#906cff'
+      red: '#ff5458'
+      white: '#a6b3cc'
+      yellow: '#ffb378'
+    primary:
+      background: '#1e1c31'
+      foreground: '#cbe1e7'
+    selection:
+      background: '#cbe1e7'
+      text: '#1e1c31'
+   
   material: &material
     # Default colors
     primary:
@@ -122,7 +181,7 @@ schemes:
       cyan:    '#89ddff'
       white:   '#ffffff'  # Arbitrary
 
-colors: *material
+colors: *ayu
 
 #selection:
   # This string contains all characters that are used as separators for

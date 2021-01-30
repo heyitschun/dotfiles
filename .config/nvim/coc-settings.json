@@ -1,4 +1,5 @@
 {
+  "explorer.file.showHiddenFiles": true,
   "explorer.icon.enableNerdfont": false,
   "explorer.previewAction.onHover": false,
   "tsserver.enable": true

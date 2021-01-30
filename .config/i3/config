@@ -101,16 +101,16 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1:"
-set $ws2 "2:"
-set $ws3 "3:"
-set $ws4 "4:"
-set $ws5 "5:"
-set $ws6 "6:"
-set $ws7 "7:"
-set $ws8 "8:"
-set $ws9 "9:"
-set $ws0 "0:"
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws0 "0"
 
 # switch to workspace
 bindsym $mod+0 workspace $ws0
@@ -140,12 +140,11 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 
 assign [class="^Brave-browser$"] $ws1
 assign [class="^Alacritty$"] $ws2
-assign [class="WebApp-Notion4124"] $ws3
-assign [class="Transmission-gtk"] $ws4
-assign [class="^Gnome-calendar$"] $ws8
+assign [class="^dolphin$"] $ws8
+assign [class="Spotify"] $ws0
 
 for_window [class="Com.github.johnfactotum.Foliate"] move to workspace $ws7
-for_window [class="Spotify"] move to workspace $ws0
+#for_window [class="Spotify"] move to workspace $ws0
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -200,18 +199,18 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 hide_edge_borders both
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        status_command i3blocks
-        font pango:Ubuntu Mono 12
-        colors {
-                background $bg-color
-                separator #757575
-                #                  border             background         text
-                focused_workspace  $border-color      $ws-bg-color       $text-color
-                inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-                urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-        }
-}
+#bar {
+        #status_command i3blocks
+        #font pango:Ubuntu Mono 12
+        #colors {
+                #background $bg-color
+                #separator #757575
+                                  #border             background         text
+                #focused_workspace  $border-color      $ws-bg-color       $text-color
+                #inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+                #urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+        #}
+#}
 
 ################################################################################
 # User commands
@@ -352,7 +351,7 @@ mode "$mode_gaps_left" {
 }
 
 # start up apps
-exec_always feh --bg-fill /home/chun/Pictures/The-Colorado-Rockies.jpg
+exec_always feh --bg-fill /mnt/hdd/wallpapers/nature/Norway-Ryten.jpg
 exec spotify
 
-
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh

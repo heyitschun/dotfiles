@@ -17,8 +17,8 @@ source <sfile>:h/languages/go.vim
 source <sfile>:h/languages/python.vim
 
 "Quick UI
-colorscheme material
-let g:lightline.colorscheme = 'material_vim'
+colorscheme ayu
+let g:lightline.colorscheme = 'ayu'
 let g:oceanic_for_polyglot = 1
 
 "Language settings. Too few for a whole folder or file.
