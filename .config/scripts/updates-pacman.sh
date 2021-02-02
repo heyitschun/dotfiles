@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if ! updates=$(checkupdates 2> /dev/null | wc -l ); then
+if ! updates=$(paru -Qu 2> /dev/null | wc -l ); then
     updates=0
 fi
 

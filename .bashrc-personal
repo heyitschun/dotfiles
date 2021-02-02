@@ -16,8 +16,6 @@
 #[[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
 
 #-------------#
-# Keybindings #
-# Aliases     #
 # Functions   #
 #-------------#
 
@@ -48,8 +46,13 @@ ex ()
   fi
 }
 
+#-------------#
+# Aliases     #
+#-------------#
+
 alias cat='bat --theme=base16'
 alias config='/usr/bin/git --git-dir=/home/chun/dotfiles/ --work-tree=/home/chun'
+alias cf='cd /mnt/ssd/' # change to code files directory
 alias ls='exa --color=auto -la'
 alias r='ranger '
 
