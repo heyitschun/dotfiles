@@ -1,3 +1,5 @@
+[!https://heyitschun-assets.s3.amazonaws.com/images/gear.svg](gear)
+
 Dotfile management without symlinks based on [this method](https://www.atlassian.com/git/tutorials/dotfiles).
 
 # Setup From Scratch
