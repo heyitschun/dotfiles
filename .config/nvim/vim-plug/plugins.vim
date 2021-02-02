@@ -16,6 +16,7 @@ Plug 'machakann/vim-sandwich'
 Plug 'vimwiki/vimwiki'
 
 "Interface
+Plug 'junegunn/goyo.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
 

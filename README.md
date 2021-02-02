@@ -45,7 +45,7 @@ echo "dotfiles" >> .gitignore
 ## Clone dotfiles into bare repository
 
 ```bash
-git clone --bare <dotfiles-repo-url> $HOME/dotfiles
+git clone --bare https://github.com/heyitschun/dotfiles $HOME/dotfiles
 ```
 
 ## Checkout the content
@@ -73,3 +73,9 @@ config checkout
 ```bash
 config config --local status.showUntrackedFiles no
 ```
+
+# Usage
+
+All built-in `git` commands will work with `config`. To add all modified files, run `config add -u`.
+
+Do not run `config add -A`. This will add every file in the `$HOME`.

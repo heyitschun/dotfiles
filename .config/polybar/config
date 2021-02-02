@@ -18,20 +18,23 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #cc0f1419
-background-alt = #253340
+background = #000f1419
+background-alt = #e6253340
 ;foreground = ${xrdb:color7:#222}
 foreground = #e6e1cf
 foreground-alt = #555
 primary = #fff779
-secondary = #e7c547
-alert = #ff6565
+secondary = #4e7c547
+alert = #ff3333
+
+; ------------------------------------- ;
+;                 Bars                  ;
+; ------------------------------------- ;
 
 [bar/example]
-;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
 height = 27
-;offset-x = 1%
+;offset-x = 0.5%
 ;offset-y = 1%
 radius = 0.0
 fixed-center = false
@@ -58,27 +61,27 @@ font-3 = Font Awesome 5 Free:pixelsize:12;2
 font-4 = Font Awesome 5 Free Solid:pixelsize:12;2
 font-5 = Font Awesome 5 Brands:pixelsize:12;2
 
-modules-left = i3 xwindow
-modules-middle = updates
-modules-right = pulseaudio filesystem memory cpu eth temperature date
+modules-left = i3
+modules-center = 
+modules-right = pulseaudio filesystem memory cpu eth date updates-pacman
 
 tray-position = none
 tray-padding = 2
 ;tray-background = #0063ff
 
-;wm-restack = bspwm
 wm-restack = i3
 
 ;override-redirect = true
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
 
 ;scroll-up = i3wm-wsnext
 ;scroll-down = i3wm-wsprev
 
 cursor-click = pointer
 cursor-scroll = ns-resize
+
+; ------------------------------------- ;
+;               Modules                 ;
+; ------------------------------------- ;
 
 [module/xwindow]
 type = internal/xwindow
@@ -108,31 +111,9 @@ mount-0 = /
 mount-1 = /mnt/hdd
 mount-2 = /mnt/ssd
 
-label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %free%
+label-mounted = %{F#fff779}%mountpoint%%{F-}: %free%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
-
-;[module/bspwm]
-;type = internal/bspwm
-
-;label-focused = %index%
-;label-focused-background = ${colors.background-alt}
-;label-focused-underline= ${colors.primary}
-;label-focused-padding = 2
-
-;label-occupied = %index%
-;label-occupied-padding = 2
-
-;label-urgent = %index%!
-;label-urgent-background = ${colors.alert}
-;label-urgent-padding = 2
-
-;label-empty = %index%
-;label-empty-foreground = ${colors.foreground-alt}
-;label-empty-padding = 2
-
-; Separator in between workspaces
-; label-separator = |
 
 [module/i3]
 type = internal/i3
@@ -148,7 +129,7 @@ ws-icon-1 = 2;
 ws-icon-2 = 3;
 ws-icon-3 = 4;
 ws-icon-4 = 5;
-ws-icon-5 = 6;
+ws-icon-5 = 6;
 ws-icon-6 = 7;
 ws-icon-7 = 8;
 ws-icon-8 = 9;
@@ -256,10 +237,10 @@ label = %date% %time%
 type = internal/pulseaudio
 
 format-volume = <label-volume> <bar-volume>
-label-volume = VOL %percentage%%
-label-volume-foreground = ${root.foreground}
+label-volume =  %percentage%%
+label-volume-foreground = ${colors.foreground-alt}
 
-label-muted = 🔇 muted
+label-muted =  muted
 label-muted-foreground = #666
 
 bar-volume-width = 10
@@ -279,14 +260,12 @@ bar-volume-empty = ─
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
 
-;[module/updates]
-;type = custom/script
-;exec = checkupdates | wc -l
-;interval = 1000
-;label = Updates: %output%
-;format.foreground = ${colors.foreground}
-;format-prefix = " "
-;format-prefix-foreground = ${colors.urgent}
+[module/updates-pacman]
+type = custom/script
+exec = ~/.config/scripts/updates-pacman.sh
+interval = 600
+format-prefix = " "
+format-prefix-foreground = #ff6565
 
 [module/temperature]
 type = internal/temperature
@@ -307,16 +286,19 @@ ramp-1 = 
 ramp-2 = 
 ramp-foreground = ${colors.foreground-alt}
 
+; ------------------------------------- ;
+;               Settings                ;
+; ------------------------------------- ;
+
 [settings]
 screenchange-reload = true
 ;compositing-background = xor
 ;compositing-background = screen
 ;compositing-foreground = source
 ;compositing-border = over
-;pseudo-transparency = false
 
 [global/wm]
-margin-top = 5
+margin-top = 0
 margin-bottom = 5
 
 ; vim:ft=dosini

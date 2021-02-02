@@ -32,44 +32,8 @@ window:
   #  x: 0
   #  y: 0
 
-  #dynamic_padding: false
-
-  # Window decorations
-  #
-  # Values for `decorations`:
-  #     - full: Borders and title bar
-  #     - none: Neither borders nor title bar
-  #
-  # Startup Mode (changes require restart)
-  #
-  # Values for `startup_mode`:
-  #   - Windowed
-  #   - Maximized
-  #   - Fullscreen
-  
-  # Allow terminal applications to change Alacritty's window title.
-  #dynamic_title: true
-
-  # Window class (Linux/BSD only):
-  #class:
-    # Application instance name
-    #instance: Alacritty
-    # General application class
-    #general: Alacritty
-
-  # GTK theme variant (Linux/BSD only)
-  #
-  # Override the variant of the GTK theme. Commonly supported values are `dark`
-  # and `light`. Set this to `None` to use the default theme variant.
-  #gtk_theme_variant: None
-
-#scrolling:
-  # Maximum number of lines in the scrollback buffer.
-  # Specifying '0' will disable scrolling.
-  #history: 10000
-
-  # Scrolling distance multiplier.
-  #multiplier: 3
+scrolling:
+  history: 10000
 
 # Font configuration
 font:
@@ -347,10 +311,6 @@ mouse_bindings:
 #       Go to the previous regex in the search history.
 #   - SearchHistoryNext
 #       Go to the next regex in the search history.
-#
-# - macOS exclusive actions:
-#   - ToggleSimpleFullscreen
-#       Enter fullscreen without occupying another space.
 #
 # - Linux/BSD exclusive actions:
 #
