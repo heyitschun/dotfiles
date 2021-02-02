@@ -1,4 +1,4 @@
-[!https://heyitschun-assets.s3.amazonaws.com/images/gear.svg](gear)
+![Icon by: Pixel perfect](https://heyitschun-assets.s3.amazonaws.com/images/gear.svg)
 
 Dotfile management without symlinks based on [this method](https://www.atlassian.com/git/tutorials/dotfiles).
 
