@@ -1,4 +1,4 @@
-<p>
+<p align="center">
     <img src="https://heyitschun-assets.s3.amazonaws.com/images/gear.svg" alt="Icon by: Pixel perfect">
 </p>
 
