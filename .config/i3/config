@@ -47,7 +47,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+space exec "rofi -modi window,drun,run -show run -sidebar-mode -terminal alacritty -color-window '#000000, #000000, #000000' -color-normal '#000000, #b3e774, #000000, #b3e774, #000000' -color-active '#000000, #b3e774, #000000, #b3e774, #000000' -color-urgent '#000000, #b3e774, #000000, #b3e774, #000000'"
+bindsym $mod+space exec "rofi -modi drun,run -show run -sidebar-mode -terminal alacritty -color-window '#000000, #000000, #000000' -color-normal '#000000, #b3e774, #000000, #b3e774, #000000' -color-active '#000000, #b3e774, #000000, #b3e774, #000000' -color-urgent '#000000, #b3e774, #000000, #b3e774, #000000'"
 
 # change focus
 bindsym $mod+j focus left
@@ -352,7 +352,7 @@ mode "$mode_gaps_left" {
 }
 
 # start up apps
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always feh --bg-fill /mnt/hdd/wallpapers/nature/Norway-Ryten.jpg
 exec spotify
-
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id nm-applet

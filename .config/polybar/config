@@ -65,9 +65,9 @@ modules-left = i3
 modules-center = 
 modules-right = pulseaudio filesystem memory cpu eth date updates-pacman
 
-tray-position = none
-tray-padding = 2
-;tray-background = #0063ff
+tray-position = left
+tray-padding = 0
+tray-background = #000000
 
 wm-restack = i3
 
