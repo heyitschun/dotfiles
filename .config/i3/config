@@ -43,8 +43,14 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec alacritty
 
+# open a browser
+bindsym $mod+b exec brave-browser
+
 # kill focused window
 bindsym $mod+Shift+q kill
+
+# rofi-calc
+bindsym $mod+c exec "LC_NUMERIC=en_US.UTF-8 rofi -show calc -modi calc -no-show-match -no-sort -theme glue_pro_yellow"
 
 # start program launcher
 bindsym $mod+space exec "rofi -modi drun,run -show run -sidebar-mode -terminal alacritty -color-window '#000000, #000000, #000000' -color-normal '#000000, #b3e774, #000000, #b3e774, #000000' -color-active '#000000, #b3e774, #000000, #b3e774, #000000' -color-urgent '#000000, #b3e774, #000000, #b3e774, #000000'"
@@ -140,11 +146,13 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 
 assign [class="^Brave-browser$"] $ws1
 assign [class="^Alacritty$"] $ws2
-assign [class="^dolphin$"] $ws8
+assign [class="Transmission-gtk"] $ws4
+assign [class="Nemo"] $ws8
 assign [class="Spotify"] $ws0
-assign [class="electrum"] $ws6
+assign [class="electrum"] $ws9
 
-for_window [class="Com.github.johnfactotum.Foliate"] move to workspace $ws7
+for_window [class="Com.github.johnfactotum.Foliate"] move to workspace $ws3
+for_window [class="Com.gitlab.newsflash"] move to workspace $ws3
 #for_window [class="Spotify"] move to workspace $ws0
 
 # reload the configuration file
@@ -352,7 +360,7 @@ mode "$mode_gaps_left" {
 }
 
 # start up apps
+#exec_always picom --no-vsync
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always feh --bg-fill /mnt/hdd/wallpapers/nature/Norway-Ryten.jpg
+exec_always feh --bg-fill /mnt/hdd/wallpapers/cities/Los-Angeles-1.jpg
 exec spotify
-exec --no-startup-id nm-applet
