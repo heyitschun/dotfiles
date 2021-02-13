@@ -80,12 +80,13 @@ alias vpn='surfshark-vpn '
 
 neofetch
 
-if [ -x "$(command -v picom)" ]; then
-  picom &> /dev/null &
-fi
+#if [ -x "$(command -v picom)" ]; then
+  #picom &> /dev/null &
+#fi
 
 #source ~/gitstatus/gitstatus.prompt.sh
-if [ "$TERM" != "linux" ] && [ -f "$HOME/go/bin/powerline-go" ]; then
-    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-fi
+#if [ "$TERM" != "linux" ] && [ -f "$HOME/go/bin/powerline-go" ]; then
+    #PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+#fi
 
+source <(silver init)

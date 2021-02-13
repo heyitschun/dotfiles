@@ -27,6 +27,7 @@ Plug 'leafoftree/vim-vue-plugin'
 "Themes
 Plug 'ayu-theme/ayu-vim'
 Plug 'challenger-deep-theme/vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'morhetz/gruvbox'
 Plug 'kaicataldo/material.vim'
 Plug 'adrian5/oceanic-next-vim'

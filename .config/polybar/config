@@ -18,7 +18,7 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #cc0f1419
+background = #cc282A36
 background-alt = #cc253340
 ;foreground = ${xrdb:color7:#222}
 foreground = #e6e1cf
@@ -26,6 +26,27 @@ foreground-alt = #555
 primary = #fff779
 secondary = #4e7c547
 alert = #ff3333
+underline = #44475A
+
+bg = #282a36
+bg-alt = #44475a
+bg-darker = #21222c
+fg = #f8f8f2
+
+blue = #6272a4
+cyan = #8be9fd
+green = #50fa7b
+orange = #ffb86c
+pink = #ff79c6
+purple = #bd93f9
+red = #ff5555
+yellow = #f1fa8c
+
+black = #000
+white = #FFF
+
+trans = #00000000
+semi-trans-black = #aa000000
 
 ; ------------------------------------- ;
 ;                 Bars                  ;
@@ -59,9 +80,10 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=11;1
 font-3 = FontAwesome:pixelsize:12;2
 
-modules-left = i3 xwindow
-modules-center = publicip
-modules-right = blur-toggle pulseaudio filesystem memory cpu eth date sysupdates
+modules-left = i3
+modules-center =
+modules-right = pulseaudio filesystem eth memory cpu publicip date sysupdates
+
 
 tray-position = none
 tray-padding = 0
@@ -136,19 +158,19 @@ ws-icon-2 = 3;
 ws-icon-3 = 4;
 ws-icon-4 = 5;
 ws-icon-5 = 6;
-ws-icon-6 = 7;
-ws-icon-7 = 8;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
 ws-icon-8 = 9;
 ws-icon-9 = 0;
 
 label-mode-padding = 0
 label-mode-foreground = #000
-label-mode-background = ${colors.primary}
+label-mode-background = ${colors.green}
 
 ; focused = Active workspace on focused monitor
 label-focused = %icon%
 label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
+label-focused-underline= ${colors.green}
 label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
@@ -163,7 +185,7 @@ label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %icon%
-label-urgent-background = ${colors.alert}
+label-urgent-background = ${colors.pink}
 label-urgent-padding = 2
 
 ; Separator in between workspaces
@@ -174,7 +196,7 @@ type = internal/cpu
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #f90000
+format-underline = ${colors.blue}
 label = %percentage:2%%
 
 [module/memory]
@@ -182,7 +204,7 @@ type = internal/memory
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #b8cc52
+format-underline = ${colors.blue}
 label = %percentage_used%%
 
 [module/wlan]
@@ -235,14 +257,16 @@ time-alt = %H:%M:%S
 
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
+format-underline = ${colors.blue}
 
 label = %date% %time%
 
 [module/publicip]
 type = custom/script
 exec = ~/.config/scripts/get-ip.sh
+label = "%output%"
 interval = 5
+format-underline = ${colors.blue}
 
 [module/pulseaudio]
 type = internal/pulseaudio

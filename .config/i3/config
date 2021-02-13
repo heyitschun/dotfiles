@@ -50,7 +50,7 @@ bindsym $mod+b exec brave-browser
 bindsym $mod+Shift+q kill
 
 # rofi-calc
-bindsym $mod+c exec "LC_NUMERIC=en_US.UTF-8 rofi -show calc -modi calc -no-show-match -no-sort -theme glue_pro_yellow"
+bindsym $mod+c exec `LC_NUMERIC=en_US.UTF-8 rofi -show calc -modi calc -no-show-match -no-sort -theme glue_pro_yellow -calc-command "echo -n '{result}' | xclip"`
 
 # start program launcher
 bindsym $mod+space exec "rofi -modi drun,run -show run -sidebar-mode -terminal alacritty -color-window '#000000, #000000, #000000' -color-normal '#000000, #b3e774, #000000, #b3e774, #000000' -color-active '#000000, #b3e774, #000000, #b3e774, #000000' -color-urgent '#000000, #b3e774, #000000, #b3e774, #000000'"
@@ -147,9 +147,12 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 assign [class="^Brave-browser$"] $ws1
 assign [class="^Alacritty$"] $ws2
 assign [class="Transmission-gtk"] $ws4
-assign [class="Nemo"] $ws8
+assign [class="Nemo"] $ws7
 assign [class="Spotify"] $ws0
+assign [class="cryptowatch"] $ws8
 assign [class="electrum"] $ws9
+assign [class="monero-core"] $ws9
+assign [class="Daedalus Mainnet"] $ws9
 
 for_window [class="Com.github.johnfactotum.Foliate"] move to workspace $ws3
 for_window [class="Com.gitlab.newsflash"] move to workspace $ws3
@@ -193,17 +196,26 @@ bindsym $mod+r mode "resize"
 set $bg-color 	         #212121
 set $ws-bg-color         #4f5b62
 set $inactive-bg-color   #212121
-set $border-color        #62727b
+set $border-color        #fff779
 set $text-color          #f5f5f5
 set $inactive-text-color #707070
 set $urgent-bg-color     #ef5350
 
-# window colors
-#                       border              background         text                 indicator
-client.focused          $border-color       $border-color      $text-color          #00ff0000
-client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff0000
-client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff0000
-client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff0000
+ #window colors
+                       #border              background         text                 indicator
+#client.focused          $border-color       $border-color      $text-color          #00ff0000
+#client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff0000
+#client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff0000
+#client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff0000
+
+# class                 border  bground text    indicator child_border
+client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
+client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
+client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
+client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
+client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
+
+client.background       #F8F8F2
 
 hide_edge_borders both
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -364,3 +376,4 @@ mode "$mode_gaps_left" {
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always feh --bg-fill /mnt/hdd/wallpapers/cities/Los-Angeles-1.jpg
 exec spotify
+exec cryptowatch
