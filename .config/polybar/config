@@ -18,11 +18,11 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #cc282A36
+background = #aa282A36
 background-alt = #cc253340
 ;foreground = ${xrdb:color7:#222}
 foreground = #e6e1cf
-foreground-alt = #555
+foreground-alt = #828282
 primary = #fff779
 secondary = #4e7c547
 alert = #ff3333
@@ -53,10 +53,10 @@ semi-trans-black = #aa000000
 ; ------------------------------------- ;
 
 [bar/example]
-width = 100%
-height = 27
-;offset-x = 0.5%
-;offset-y = 1%
+width = 99%
+height = 24
+offset-x = 0.5%
+offset-y = 0.5%
 radius = 0.0
 fixed-center = false
 
@@ -78,7 +78,10 @@ module-margin-right = 1
 font-0 = Ubuntu Mono:pixelsize=12;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=11;1
-font-3 = FontAwesome:pixelsize:12;2
+font-3 = Font Awesome 5 Free Solid:pixelsize:12;2
+font-4 = Font Awesome 5 Free Regular:pixelsize:12;2
+font-5 = Font Awesome 5 Brands:pixelsize:12;2
+font-6 = FontAwesome:pixelsize:12;2
 
 modules-left = i3
 modules-center =
@@ -91,7 +94,7 @@ tray-background = #000000
 
 wm-restack = i3
 
-;override-redirect = true
+override-redirect = true
 
 ;scroll-up = i3wm-wsnext
 ;scroll-down = i3wm-wsprev
@@ -152,7 +155,7 @@ wrapping-scroll = false
 ; Only show workspaces on the same output as the bar
 ;pin-workspaces = true
 
-ws-icon-0 = 1;
+ws-icon-0 = 1;
 ws-icon-1 = 2;
 ws-icon-2 = 3;
 ws-icon-3 = 4;
@@ -160,7 +163,7 @@ ws-icon-4 = 5;
 ws-icon-5 = 6;
 ws-icon-6 = 7;
 ws-icon-7 = 8;
-ws-icon-8 = 9;
+ws-icon-8 = 9;
 ws-icon-9 = 0;
 
 label-mode-padding = 0
@@ -189,7 +192,7 @@ label-urgent-background = ${colors.pink}
 label-urgent-padding = 2
 
 ; Separator in between workspaces
-; label-separator = |
+;label-separator = |
 
 [module/cpu]
 type = internal/cpu

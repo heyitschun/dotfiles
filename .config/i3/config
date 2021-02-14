@@ -249,6 +249,7 @@ for_window [class="^.*"] border pixel 1
 
 gaps inner 7
 gaps outer 7
+gaps top 32
 
 set $mode_gaps Gaps: (o)uter, (i)nner, (h)orizontal, (v)ertical, (t)op, (r)ight, (b)ottom, (l)eft
 set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
@@ -372,8 +373,9 @@ mode "$mode_gaps_left" {
 }
 
 # start up apps
-#exec_always picom --no-vsync
+exec picom &
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always feh --bg-fill /mnt/hdd/wallpapers/cities/Los-Angeles-1.jpg
+#exec_always feh --bg-fill /mnt/hdd/wallpapers/cities/Los-Angeles-1.jpg
+exec_always feh --bg-fill /mnt/hdd/wallpapers/art/purple-nebula.jpg
 exec spotify
 exec cryptowatch
