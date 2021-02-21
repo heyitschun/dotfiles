@@ -50,7 +50,7 @@ bindsym $mod+b exec brave-browser
 bindsym $mod+Shift+q kill
 
 # rofi-calc
-bindsym $mod+c exec `LC_NUMERIC=en_US.UTF-8 rofi -show calc -modi calc -no-show-match -no-sort -theme glue_pro_yellow -calc-command "echo -n '{result}' | xclip"`
+bindsym $mod+c exec `LC_NUMERIC=en_US.UTF-8 rofi -show calc -modi calc -no-show-match -no-sort -theme dracula-green -calc-command "echo -n '{result}' | xclip"`
 
 # start program launcher
 bindsym $mod+space exec "rofi -modi drun,run -show run -sidebar-mode -terminal alacritty -color-window '#000000, #000000, #000000' -color-normal '#000000, #b3e774, #000000, #b3e774, #000000' -color-active '#000000, #b3e774, #000000, #b3e774, #000000' -color-urgent '#000000, #b3e774, #000000, #b3e774, #000000'"

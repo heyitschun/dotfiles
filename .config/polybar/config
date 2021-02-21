@@ -85,7 +85,7 @@ font-6 = FontAwesome:pixelsize:12;2
 
 modules-left = i3
 modules-center =
-modules-right = pulseaudio filesystem eth memory cpu publicip date sysupdates
+modules-right = pulseaudio disk-space eth memory cpu publicip date sysupdates
 
 
 tray-position = none
@@ -112,7 +112,6 @@ hook-0 = echo 
 hook-1 = echo 
 click-left = ~/.config/scripts/picom-blur-toggle.sh
 initial = 1
-format-foreground = #ff0000
 
 [module/xwindow]
 type = internal/xwindow
@@ -201,6 +200,14 @@ format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = ${colors.blue}
 label = %percentage:2%%
+
+[module/disk-space]
+type = custom/script
+format-prefix = " "
+exec = ~/.config/scripts/disk-space.sh
+click-left = ~/.config/scripts/disk-space.sh --popup
+format-underline = ${colors.blue}
+format-prefix-foreground = ${colors.foreground-alt}
 
 [module/memory]
 type = internal/memory
