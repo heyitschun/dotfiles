@@ -17,33 +17,41 @@
 ;==========================================================
 
 [colors]
+
 ;background = ${xrdb:color0:#222}
-background = #aa282A36
-background-alt = #cc253340
 ;foreground = ${xrdb:color7:#222}
-foreground = #e6e1cf
-foreground-alt = #828282
-primary = #fff779
-secondary = #4e7c547
-alert = #ff3333
-underline = #44475A
 
-bg = #282a36
-bg-alt = #44475a
-bg-darker = #21222c
-fg = #f8f8f2
+;Dracula
+;bg = #282a36
+;bg-alt = #44475a
+;bg-darker = #21222c
+;fg = #f8f8f2
+;blue = #6272a4
+;cyan = #8be9fd
+;green = #50fa7b
+;orange = #ffb86c
+;pink = #ff79c6
+;purple = #bd93f9
+;red = #ff5555
+;yellow = #f1fa8c
+;black = #000
+;white = #FFF
 
-blue = #6272a4
-cyan = #8be9fd
-green = #50fa7b
+;Ayu
+black = #000000
+blue = #36a3d9
+cyan = #95e6cb
+green = #b8cc52
+purple = #f07178
+red = #ff3333
+pink = #ff6565
+white = #ffffff
+yellow = #e7c547
 orange = #ffb86c
-pink = #ff79c6
-purple = #bd93f9
-red = #ff5555
-yellow = #f1fa8c
-
-black = #000
-white = #FFF
+bg = #780f1419
+bg-alt = #253340
+fg = #e6e1cf
+fg-alt = #5c6773
 
 trans = #00000000
 semi-trans-black = #aa000000
@@ -60,8 +68,8 @@ offset-y = 0.5%
 radius = 0.0
 fixed-center = false
 
-background = ${colors.background}
-foreground = ${colors.foreground}
+background = ${colors.bg}
+foreground = ${colors.fg}
 
 line-size = 3
 line-color = #f00
@@ -122,16 +130,16 @@ type = internal/xkeyboard
 blacklist-0 = num lock
 
 format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-underline = ${colors.secondary}
+format-prefix-foreground = ${colors.fg-alt}
+format-prefix-underline = ${colors.orange}
 
 label-layout = %layout%
-label-layout-underline = ${colors.secondary}
+label-layout-underline = ${colors.orange}
 
 label-indicator-padding = 2
 label-indicator-margin = 1
-label-indicator-background = ${colors.secondary}
-label-indicator-underline = ${colors.secondary}
+label-indicator-background = ${colors.orange}
+label-indicator-underline = ${colors.orange}
 
 [module/filesystem]
 type = internal/fs
@@ -143,7 +151,7 @@ mount-2 = /mnt/ssd
 
 label-mounted = %{F#fff779}%mountpoint%%{F-}: %free%
 label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${colors.foreground-alt}
+label-unmounted-foreground = ${colors.fg-alt}
 
 [module/i3]
 type = internal/i3
@@ -171,7 +179,7 @@ label-mode-background = ${colors.green}
 
 ; focused = Active workspace on focused monitor
 label-focused = %icon%
-label-focused-background = ${colors.background-alt}
+label-focused-background = ${colors.bg-alt}
 label-focused-underline= ${colors.green}
 label-focused-padding = 2
 
@@ -197,7 +205,7 @@ label-urgent-padding = 2
 type = internal/cpu
 interval = 2
 format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-foreground = ${colors.fg-alt}
 format-underline = ${colors.blue}
 label = %percentage:2%%
 
@@ -207,13 +215,13 @@ format-prefix = " "
 exec = ~/.config/scripts/disk-space.sh
 click-left = ~/.config/scripts/disk-space.sh --popup
 format-underline = ${colors.blue}
-format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-foreground = ${colors.fg-alt}
 
 [module/memory]
 type = internal/memory
 interval = 2
 format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-foreground = ${colors.fg-alt}
 format-underline = ${colors.blue}
 label = %percentage_used%%
 
@@ -230,14 +238,14 @@ format-disconnected =
 ;format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
+;label-disconnected-foreground = ${colors.fg-alt}
 
 ramp-signal-0 = 
 ramp-signal-1 = 
 ramp-signal-2 = 
 ramp-signal-3 = 
 ramp-signal-4 = 
-ramp-signal-foreground = ${colors.foreground-alt}
+ramp-signal-foreground = ${colors.fg-alt}
 
 [module/eth]
 type = internal/network
@@ -246,14 +254,14 @@ interval = 3.0
 
 format-connected-underline = #55aa55
 format-connected-prefix = " "
-format-connected-prefix-foreground = ${colors.foreground-alt}
+format-connected-prefix-foreground = ${colors.fg-alt}
 label-connected = %local_ip%
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
+;label-disconnected-foreground = ${colors.fg-alt}
 
 [module/date]
 type = internal/date
@@ -266,7 +274,7 @@ time = %H:%M
 time-alt = %H:%M:%S
 
 format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-foreground = ${colors.fg-alt}
 format-underline = ${colors.blue}
 
 label = %date% %time%
@@ -283,7 +291,7 @@ type = internal/pulseaudio
 
 format-volume = <label-volume> <bar-volume>
 label-volume =  %percentage%%
-label-volume-foreground = ${colors.foreground}
+label-volume-foreground = ${colors.fg}
 
 label-muted =  muted
 label-muted-foreground = #666
@@ -303,7 +311,7 @@ bar-volume-fill = ─
 bar-volume-fill-font = 2
 bar-volume-empty = ─
 bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.foreground-alt}
+bar-volume-empty-foreground = ${colors.fg-alt}
 
 [module/sysupdates]
 type = custom/script
@@ -324,12 +332,12 @@ format-warn-underline = ${self.format-underline}
 
 label = %temperature-c%
 label-warn = %temperature-c%
-label-warn-foreground = ${colors.secondary}
+label-warn-foreground = ${colors.orange}
 
 ramp-0 = 
 ramp-1 = 
 ramp-2 = 
-ramp-foreground = ${colors.foreground-alt}
+ramp-foreground = ${colors.fg-alt}
 
 ; ------------------------------------- ;
 ;               Settings                ;

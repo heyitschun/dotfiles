@@ -39,7 +39,7 @@ scrolling:
 font:
   normal:
     family: "UbuntuMono Nerd Font Mono"
-    #style: Regular
+    style: medium
 
   #bold:
     #family: monospace
@@ -199,7 +199,7 @@ schemes:
       cyan:    '#89ddff'
       white:   '#ffffff'  # Arbitrary
 
-colors: *dracula
+colors: *ayu
 
 #selection:
   # This string contains all characters that are used as separators for

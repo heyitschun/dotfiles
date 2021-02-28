@@ -22,6 +22,7 @@ Plug 'tpope/vim-fugitive'
 
 "Languages
 Plug 'sheerun/vim-polyglot' " https://github.com/sheerun/vim-polyglot
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'leafoftree/vim-vue-plugin'
 
 "Themes
