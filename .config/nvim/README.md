@@ -7,6 +7,23 @@ Folder structure based on [ChristianChiarulli's setup](https://github.com/Christ
 
 # Setup
 
+## Linux
+
+Setup Vim Plug:
+
+```
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+```
+
+Grab the [dotfiles](https://github.com/heyitschun/dotfiles), open NeoVim and run:
+
+```
+:PlugInstall
+```
+
+Plugins will be installed into `~/.local/share/nvim/plugged`.
+
 ## Windows
 If Vim Plug is not setup yet, open up PowerShell and run:
 
@@ -34,7 +51,7 @@ This will install all the listed plugins into **~/AppData/local/nvim-data/plugge
 If the Vim is slow to start (as in more than 3 seconds) you can create a startup time report:
 
 ```
-nvim --startuptime vim-report.txt
+nvim --startuptime ~/vim-report.txt
 ```
 
 # More Plugins
