@@ -39,7 +39,7 @@ scrolling:
 font:
   normal:
     family: "UbuntuMono Nerd Font Mono"
-    style: medium
+    #style: bold
 
   #bold:
     #family: monospace

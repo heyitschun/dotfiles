@@ -22,7 +22,7 @@ Grab the [dotfiles](https://github.com/heyitschun/dotfiles), open NeoVim and run
 :PlugInstall
 ```
 
-Plugins will be installed into `~/.local/share/nvim/plugged`.
+Plugins will be installed into **~/.local/share/nvim/plugged**
 
 ## Windows
 If Vim Plug is not setup yet, open up PowerShell and run:
@@ -48,7 +48,7 @@ Clone this repository into **~/AppData/Local/nvim/**, open up init.vim and run:
 This will install all the listed plugins into **~/AppData/local/nvim-data/plugged**.
 
 # Startup Report
-If the Vim is slow to start (as in more than 3 seconds) you can create a startup time report:
+If the Vim is slow to start (as in more than a second) you can create a startup time report:
 
 ```
 nvim --startuptime ~/vim-report.txt
