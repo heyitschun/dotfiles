@@ -17,8 +17,8 @@ source <sfile>:h/languages/go.vim
 source <sfile>:h/languages/python.vim
 
 "Quick UI
-colorscheme ayu
-let g:lightline.colorscheme = 'ayu'
+colorscheme nord
+let g:lightline.colorscheme = 'nord'
 let g:dracula_italic = 0
 let g:oceanic_for_polyglot = 1
 

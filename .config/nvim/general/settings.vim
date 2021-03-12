@@ -12,7 +12,4 @@ set softtabstop=2
 set splitbelow
 set splitright
 set tabstop=2
-
-if (has('termguicolors'))
-  set termguicolors
-endif
+set termguicolors

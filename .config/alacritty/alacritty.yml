@@ -171,12 +171,43 @@ schemes:
       cyan:    '0x59dffc'
       white:   '0xe6e6d1'
    
+  lighthaus: &lighthaus
+    primary:
+      background: '#18191E'
+      foreground: '#FFEE79'
+    selection:
+      text:       '#FF4D00'
+      background: '#090B26'
+    # Cursor colors
+    cursor:
+      text:       '#18191E'
+      cursor:     '#FFFF00'
+    # Normal colors
+    normal:
+      black:      '#18191E'
+      red:        '#FC2929'
+      green:      '#44B273'
+      yellow:     '#E25600'
+      blue:       '#1D918B'
+      magenta:    '#D16BB7'
+      cyan:       '#00BFA4'
+      white:      '#CCCCCC'
+    # Bright colors
+    bright:
+      black:      '#21252D'
+      red:        '#FF5050'
+      green:      '#50C16E'
+      yellow:     '#ED722E'
+      blue:       '#47A8A1'
+      magenta:    '#D68EB2'
+      cyan:       '#5AD1AA'
+      white:      '#FFFADE'
+
   material: &material
     # Default colors
     primary:
       background: '#263238'
       foreground: '#eeffff'
-
     # Normal colors
     normal:
       black:   '#000000'  # Arbitrary
@@ -187,7 +218,6 @@ schemes:
       magenta: '#ff5370'  # Dark pink of the original material theme
       cyan:    '#39adb5'
       white:   '#a0a0a0'  # Arbitrary
-
     # Bright colors
     bright:
       black:   '#4e4e4e'  # Arbitrary
@@ -199,7 +229,115 @@ schemes:
       cyan:    '#89ddff'
       white:   '#ffffff'  # Arbitrary
 
-colors: *ayu
+  nord: &nord
+    primary:
+      background: '#20242d'
+      foreground: '#d8dee9'
+      dim_foreground: '#a5abb6'
+    cursor:
+      text: '#2e3440'
+      cursor: '#d8dee9'
+    vi_mode_cursor:
+      text: '#2e3440'
+      cursor: '#d8dee9'
+    selection:
+      text: CellForeground
+      background: '#4c566a'
+    search:
+      matches:
+        foreground: CellBackground
+        background: '#88c0d0'
+      bar:
+        background: '#434c5e'
+        foreground: '#d8dee9'
+    normal:
+      black: '#3b4252'
+      red: '#bf616a'
+      green: '#a3be8c'
+      yellow: '#ebcb8b'
+      blue: '#81a1c1'
+      magenta: '#b48ead'
+      cyan: '#88c0d0'
+      white: '#e5e9f0'
+    bright:
+      black: '#4c566a'
+      red: '#bf616a'
+      green: '#a3be8c'
+      yellow: '#ebcb8b'
+      blue: '#81a1c1'
+      magenta: '#b48ead'
+      cyan: '#8fbcbb'
+      white: '#eceff4'
+    dim:
+      black: '#373e4d'
+      red: '#94545d'
+      green: '#809575'
+      yellow: '#b29e75'
+      blue: '#68809a'
+      magenta: '#8c738c'
+      cyan: '#6d96a5'
+      white: '#aeb3bb'
+
+  papercolor: &papercolor
+    # Default colors
+    primary:
+      background: '#1c1c1c'
+      foreground: '#d0d0d0'
+    # Normal colors
+    normal:
+      black:   '#1c1c1c'  # Arbitrary
+      red:     '#af005f'
+      green:   '#5faf00'
+      yellow:  '#d7af5F'
+      blue:    '#5fafd7'
+      magenta: '#af87d7'  # Dark pink of the original material theme
+      cyan:    '#00afaf'
+      white:   '#d0d0d0'  # Arbitrary
+    # Bright colors
+    bright:
+      black:   '#585858'  # Arbitrary
+      red:     '#ff5faf'
+      green:   '#5faf5f'
+      yellow:  '#ffaf00'
+      blue:    '#00afaf'
+      magenta: '#f07178'  # Pink of the original material theme
+      cyan:    '#f58787'
+      white:   '#ffffff'  # Arbitrary
+
+
+
+
+  srcery: &srcery
+    # Default colors
+    primary:
+      background: '#1c1b19'
+      foreground: '#fce8c3'
+    # Cursor colors
+    cursor:
+      text: CellBackground
+      cursor: '#fbb829'
+    # Normal colors
+    normal:
+      black:   '#1c1b19'
+      red:     '#ef2f27'
+      green:   '#519f50'
+      yellow:  '#fbb829'
+      blue:    '#2c78bf'
+      magenta: '#e02c6d'
+      cyan:    '#0aaeb3'
+      white:   '#d0bfa1'
+    # Bright colors
+    bright:
+      black:   '#918175'
+      red:     '#f75341'
+      green:   '#98bc37'
+      yellow:  '#fed06e'
+      blue:    '#68a8e4'
+      magenta: '#ff5c8f'
+      cyan:    '#53fde9'
+      white:   '#fce8c3'
+
+colors: *nord
 
 #selection:
   # This string contains all characters that are used as separators for

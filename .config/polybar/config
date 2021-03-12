@@ -38,20 +38,38 @@
 ;white = #FFF
 
 ;Ayu
+;black = #000000
+;blue = #36a3d9
+;cyan = #95e6cb
+;green = #b8cc52
+;purple = #f07178
+;red = #ff3333
+;pink = #ff6565
+;white = #ffffff
+;yellow = #e7c547
+;orange = #ffb86c
+;bg = #780f1419
+;bg-alt = #253340
+;fg = #e6e1cf
+;fg-alt = #5c6773
+
+;Nord
 black = #000000
-blue = #36a3d9
-cyan = #95e6cb
-green = #b8cc52
-purple = #f07178
-red = #ff3333
+blue = #8FBCBB
+cyan = #88C0D0
+green = #A3BE8C
+purple = #B48EAD
+red = #BF616A
 pink = #ff6565
 white = #ffffff
-yellow = #e7c547
-orange = #ffb86c
-bg = #780f1419
-bg-alt = #253340
-fg = #e6e1cf
-fg-alt = #5c6773
+yellow = #EBCB8B
+orange = #D08770
+bg = #2E3440
+bg-alt = #4C566A
+fg = #ECEFF4
+fg-alt = #4C566A
+
+
 
 trans = #00000000
 semi-trans-black = #aa000000
@@ -94,7 +112,6 @@ font-6 = FontAwesome:pixelsize:12;2
 modules-left = i3
 modules-center =
 modules-right = pulseaudio disk-space eth memory cpu publicip date sysupdates
-
 
 tray-position = none
 tray-padding = 0
@@ -180,7 +197,7 @@ label-mode-background = ${colors.green}
 ; focused = Active workspace on focused monitor
 label-focused = %icon%
 label-focused-background = ${colors.bg-alt}
-label-focused-underline= ${colors.green}
+label-focused-underline= ${colors.blue}
 label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
@@ -195,7 +212,7 @@ label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %icon%
-label-urgent-background = ${colors.pink}
+label-urgent-background = ${colors.red}
 label-urgent-padding = 2
 
 ; Separator in between workspaces
@@ -285,6 +302,8 @@ exec = ~/.config/scripts/get-ip.sh
 label = "%output%"
 interval = 5
 format-underline = ${colors.blue}
+label-padding = 2
+label-background = ${colors.bg}
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -294,7 +313,7 @@ label-volume =  %percentage%%
 label-volume-foreground = ${colors.fg}
 
 label-muted =  muted
-label-muted-foreground = #666
+label-muted-foreground = ${colors.fg-alt}
 
 bar-volume-width = 10
 bar-volume-foreground-0 = ${colors.green}
