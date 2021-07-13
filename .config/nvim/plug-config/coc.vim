@@ -6,7 +6,6 @@ let g:coc_global_extensions = [
     \ 'coc-rls',
     \ 'coc-tailwindcss',
     \ 'coc-tsserver',
-    \ 'coc-vetur'
     \ ]
 
 "CoC GoTo Navigation

@@ -14,7 +14,6 @@ Plug 'preservim/nerdcommenter'
 Plug 'easymotion/vim-easymotion'
 Plug 'machakann/vim-sandwich'
 Plug 'vimwiki/vimwiki'
-Plug 'dylanaraps/wal.vim'
 
 "Interface
 Plug 'junegunn/goyo.vim'
@@ -28,16 +27,11 @@ Plug 'leafoftree/vim-vue-plugin'
 
 "Themes
 Plug 'ayu-theme/ayu-vim'
-Plug 'challenger-deep-theme/vim'
-Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'morhetz/gruvbox'
-Plug 'kaicataldo/material.vim'
 Plug 'arcticicestudio/nord-vim'
-Plug 'adrian5/oceanic-next-vim'
-Plug 'NLKNguyen/papercolor-theme'
 Plug 'eemed/sitruuna.vim'
 Plug 'srcery-colors/srcery-vim'
-Plug 'ghifarit53/tokyonight-vim'
-Plug 'lighthaus-theme/vim-lighthaus'
+Plug 'heyitschun/vim-deep-space'
+Plug 'heyitschun/vim-github-dark'
 
 call plug#end()

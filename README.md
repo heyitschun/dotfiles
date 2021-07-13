@@ -82,4 +82,4 @@ config config --local status.showUntrackedFiles no
 
 All built-in `git` commands will work with `config`. To add all modified files, run `config add -u`.
 
-Do not run `config add -A`. This will add every file in the `$HOME`.
+Do **NOT** run `config add -A`. This will add every file in the `$HOME`.

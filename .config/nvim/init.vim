@@ -7,6 +7,7 @@ source <sfile>:h/general/keymaps.vim
 source <sfile>:h/general/settings.vim
 
 source <sfile>:h/plug-config/coc.vim
+source <sfile>:h/plug-config/cosco.vim
 source <sfile>:h/plug-config/easymotion.vim
 source <sfile>:h/plug-config/fzf.vim
 source <sfile>:h/plug-config/indentLine.vim
@@ -16,12 +17,6 @@ source <sfile>:h/plug-config/vimwiki.vim
 source <sfile>:h/languages/go.vim
 source <sfile>:h/languages/python.vim
 
-"Quick UI
-colorscheme nord
-let g:lightline.colorscheme = 'nord'
-let g:dracula_italic = 0
-let g:oceanic_for_polyglot = 1
-
-"Language settings. Too few for a whole folder or file.
-let g:vim_vue_plugin_use_sass = 1
-
+"Colors
+colorscheme deepspace
+let g:lightline.colorscheme = 'deepspace'

@@ -53,6 +53,22 @@
 ;fg = #e6e1cf
 ;fg-alt = #5c6773
 
+;Gruvbox
+;black = #000000
+;blue = #458588
+;cyan = #8ec07c
+;green = #98971a
+;purple = #b16286
+;red = #cc241d
+;pink = #d3869b
+;white = #ebdbb2
+;yellow = #d79921
+;orange = #d65d0e
+;bg = #282828
+;bg-alt = #3c3836
+;fg = #ebdbb2
+;fg-alt = #fbf1c7
+
 ;Nord
 black = #000000
 blue = #8FBCBB
@@ -108,10 +124,12 @@ font-3 = Font Awesome 5 Free Solid:pixelsize:12;2
 font-4 = Font Awesome 5 Free Regular:pixelsize:12;2
 font-5 = Font Awesome 5 Brands:pixelsize:12;2
 font-6 = FontAwesome:pixelsize:12;2
+font-7 = fixed:pixelsize=10;1
+font-8 = Noto Emoji:scale=15:antialias=false;0
 
 modules-left = i3
 modules-center =
-modules-right = pulseaudio disk-space eth memory cpu publicip date sysupdates
+modules-right = pulseaudio ethereum-gas disk-space eth memory cpu publicip pomodoro date sysupdates
 
 tray-position = none
 tray-padding = 0
@@ -181,7 +199,7 @@ wrapping-scroll = false
 
 ws-icon-0 = 1;
 ws-icon-1 = 2;
-ws-icon-2 = 3;
+ws-icon-2 = 3;
 ws-icon-3 = 4;
 ws-icon-4 = 5;
 ws-icon-5 = 6;
@@ -281,20 +299,39 @@ format-disconnected =
 ;label-disconnected-foreground = ${colors.fg-alt}
 
 [module/date]
-type = internal/date
+type = custom/script
 interval = 5
-
-date = "%a, %d %b"
-date-alt = "%d %b %Y"
-
-time = %H:%M
-time-alt = %H:%M:%S
 
 format-prefix = " "
 format-prefix-foreground = ${colors.fg-alt}
 format-underline = ${colors.blue}
 
-label = %date% %time%
+exec = python3 /mnt/ssd/world_clock/main.py
+click-left = python3 /mnt/ssd/world_clock/main.py -w True
+
+[module/ethereum-gas]
+type = custom/script
+interval = 10
+
+format-prefix = " "
+format-prefix-foreground = ${colors.fg-alt}
+format-underline = ${colors.blue}
+
+exec = python3 /mnt/ssd/ethereum_gas_polybar/main.py
+click-left = python3 /mnt/ssd/ethereum_gas_polybar/main.py -a True
+
+[module/pomodoro]
+type = custom/script
+exec = ~/.config/scripts/pomodoro
+tail = true
+label = %output%
+format-underline = ${colors.blue}
+click-left = ~/.config/scripts/pomodoro toggle
+click-right = ~/.config/scripts/pomodoro end
+click-middle = ~/.config/scripts/pomodoro lock
+scroll-up = ~/.config/scripts/pomodoro time +60
+scroll-down = ~/.config/scripts/pomodoro time -60
+
 
 [module/publicip]
 type = custom/script
